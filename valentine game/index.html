@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Header -->
+    <h1>Welcome, Arshi! 💖</h1>
+    <p>Why haven't you asked me yet? 😏</p>
+
+    <!-- Start Game Button -->
+    <button id="startButton" onclick="startGame()">Start the Game</button>
+
+    <!-- Escape Room Section (Initially Hidden) -->
+    <div id="escape-room" style="display: none;">
+        <h2>You're Trapped at Dibbu's Wedding! 👰🤵</h2>
+        <p>Complete all challenges to escape before Harsh catches you! 😈</p>
+        
+        <button onclick="findShoe()">👠 Find the Missing Wedding Shoe</button>
+        <button onclick="solveMenuRiddle()">🍛 Guess the Wedding Menu</button>
+        <button onclick="dodgeFamily()">💍 Avoid Marriage Questions</button>
+        <button onclick="saveMoney()">💰 Save Money from the Klepto Friend</button>
+        
+        <p id="result"></p>
+    </div>
+
+    <!-- Snake Game Section (Initially Hidden) -->
+    <div id="snake-game-container" style="display: none;">
+        <canvas id="snakeCanvas"></canvas>
+        <p id="snake-status">💰 Collect 5 coins while dodging the klepto friend!</p>
+        <button onclick="startSnakeGame()">Start Snake Game</button>
+    </div>
+
+    <!-- External Games Section (Visible after Start) -->
+    <section id="games" style="display: none;">
+        <h2>Valentine's Day Challenge</h2>
+        <p>Complete all levels to reach the final question:</p>
+      
+        <a href="https://www.sporcle.com/games/Molsup/barca-players-nicknames" target="_blank" onclick="levelCompleted(1)">
+          Play Level 1: Barca Players Nicknames Quiz
+        </a>
+        <a href="https://www.jigsawplanet.com/?rc=play&pid=3cb2072b28e0" target="_blank" onclick="levelCompleted(2)">
+          Play Level 2: Jigsaw Puzzle Challenge
+        </a>
+        <a href="https://truthordare.app/" target="_blank" onclick="levelCompleted(3)">
+          Play Level 3: Truth or Dare - Answer 5 Questions!
+        </a>
+        <a href="https://1games.io/poor-bunny" target="_blank" onclick="levelCompleted(4)">
+          Play Level 4: Poor Bunny who dared to love Su
+        </a>
+    </section>
+
+    <!-- Final Question Section (Initially Hidden) -->
+    <div id="final-question" style="display: none;">
+        <h2>💖 Will you be my Valentine? 💖</h2>
+    </div>
+              
+    <script src="script.js"></script>
+</body>
+</html>
